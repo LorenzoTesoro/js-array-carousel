@@ -1,6 +1,44 @@
+/* Common rules */
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.container{
+    max-width: 1200px;
+    position: relative;
+}
+img{
+    max-width: 100%;
+}
+.container > a{
+    text-decoration: none;
+    background-color: lightgray;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
 
+/* arrow */
+.arrow_up{
+    position: absolute;
+    top: 0.5rem;
+    left: 570px;
+}
+
+.arrow_down{
+    position: absolute;
+    bottom: 0.7rem;
+    left: 570px;
+}
