@@ -12,12 +12,22 @@ const images = [
 // 2. Seleziono l'elemento della dom dove collocare le immagini
 const containerEl = document.querySelector(".container");
 
+
+// 3. Loop nell'array
 for (i = 0; i < images.length; i++){
 
     const containerElMarkup = `<img src="./assets/${images[i]}" alt="">`;
 
     containerEl.innerHTML += containerElMarkup;
+    
+    if(images[0]){
+        let activeImage = document.querySelector("img");
+            activeImage.classList.add("active");
+    }
+
 }
+
+
 
 // aggiungere la classe active
 
