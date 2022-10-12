@@ -12,13 +12,12 @@ const images = [
 // 2. Seleziono l'elemento della dom dove collocare le immagini
 const containerEl = document.querySelector(".container");
 
-// 3. Creo una variabile per monitorare la slide attiva
-
 for (i = 0; i < images.length; i++){
-    
+
     const containerElMarkup = `<img src="./assets/${images[i]}" alt="">`;
-    
+
     containerEl.innerHTML += containerElMarkup;
 }
 
-    
+// aggiungere la classe active
+
