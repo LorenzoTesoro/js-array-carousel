@@ -12,7 +12,7 @@ const images = [
 // 2. Seleziono l'elemento della dom dove collocare le immagini
 const containerEl = document.querySelector(".container");
 
-
+let activeImage = 0;
 // 3. Loop nell'array
 for (i = 0; i < images.length; i++){
 
@@ -24,10 +24,54 @@ for (i = 0; i < images.length; i++){
         let activeImage = document.querySelector("img");
             activeImage.classList.add("active");
     }
-
 }
 
+/* arrow_up */
+const btnUp = document.querySelector(".arrow_up");
 
+btnUp.addEventListener("click", function(){
 
-// aggiungere la classe active
+    // Seleziono tutte le immagini
+    const images = document.querySelectorAll('.container > img');
+    
+    // Seleziono l'immagine attiva
+    currentImg = images[activeImage];
 
+    // rimuovo la classe "active"
+    currentImg.classList.remove("active");
+
+    // incremento il valore da prendere nell'array
+    activeImage++;
+
+    // creo la variabile della immagine successiva
+    const nextImg = images[activeImage];
+
+    // do la classe active all'immagine successiva
+    nextImg.classList.add('active');
+
+})
+
+/* arrow_down */
+
+const btndown= document.querySelector(".arrow_down");
+btndown.addEventListener("click", function(){
+
+    // Seleziono tutte le immagini
+    const images = document.querySelectorAll('.container > img');
+    
+    // Seleziono l'immagine attiva
+    currentImg = images[activeImage];
+
+    // rimuovo la classe "active"
+    currentImg.classList.remove("active");
+
+    // incremento il valore da prendere nell'array
+    activeImage++;
+
+    // creo la variabile della immagine successiva
+    const nextImg = images[activeImage];
+
+    // do la classe active all'immagine successiva
+    nextImg.classList.add('active');
+
+})
